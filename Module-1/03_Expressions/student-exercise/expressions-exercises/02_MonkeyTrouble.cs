@@ -19,6 +19,14 @@ namespace Exercises
          */
         public bool MonkeyTrouble(bool aSmile, bool bSmile)
         {
+            if (aSmile && bSmile)
+            {
+                return true;
+            }
+            else if (!aSmile && !bSmile)
+            {
+                return true;
+            }
             return false;
         }
 

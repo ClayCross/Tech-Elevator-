@@ -15,7 +15,20 @@ namespace Exercises
         IntMax(3, 2, 1) → 3
         */
         public int IntMax(int a, int b, int c)
+
         {
+            if (a > b && a > c)
+            {
+                return a;
+            }
+            else if (b > a && b > c)
+            {
+                return b;
+            }
+
+            return c;
+
+
             return 0;
         }
 
