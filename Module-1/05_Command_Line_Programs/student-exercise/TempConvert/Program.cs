@@ -6,7 +6,10 @@ namespace TempConvert
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("What's the current Tempature?");
+
+
+
         }
     }
 }

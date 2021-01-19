@@ -5,4 +5,17 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
-</Project>
+</Project>{
+Console.Write("Please enter the temp 59");
+
+
+
+
+
+
+
+
+
+}
+
+
