@@ -16,7 +16,15 @@ namespace Exercises
          */
         public string AltPairs(string str)
         {
-            return null;
+            string multiples = "";
+
+            for (int i=0; i<str.Length -1;  i+=4)
+            {
+                if (str.Length % 2 == 0)
+                    multiples += str.Substring(1, 2);
+            }
+                   
+                  return multiples ;
         }
     }
 }

@@ -11,6 +11,24 @@ namespace CollectionsPart1Lecture
 			Console.WriteLine("       LISTS");
 			Console.WriteLine("####################");
 
+			List<string> charachters;
+			charachters = new List<string>()
+			{
+				"Harry",
+				"Ron",
+				"Hermione"
+			};
+			// Add another charachter to the end of the list
+			charachters.Add("Severus");
+			charachters.Add("Albus");
+
+			// How do I print the list by looping an CW
+			for (int i = 0; i < charachters.Count; i++)
+            {
+                Console.WriteLine(charachters[i]);
+            }
+
+			
 
 			Console.WriteLine("####################");
 			Console.WriteLine("Lists are ordered");
@@ -20,6 +38,9 @@ namespace CollectionsPart1Lecture
 			Console.WriteLine("####################");
 			Console.WriteLine("Lists allow duplicates");
 			Console.WriteLine("####################");
+
+
+			// 
 
 
 			Console.WriteLine("####################");

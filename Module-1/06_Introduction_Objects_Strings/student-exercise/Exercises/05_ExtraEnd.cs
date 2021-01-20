@@ -17,6 +17,7 @@ namespace Exercises
          */
         public string ExtraEnd(string str)
         {
+
             return null;
         }
     }
