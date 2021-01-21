@@ -16,7 +16,15 @@ namespace Exercises
           */
         public List<int> OddOnly(int[] integerArray)
         {
-            return null;
+            List<int> odds = new List<int>();
+            foreach (int ints in integerArray)
+            {
+                if( ints % 2 != 0)
+                {
+                    odds.Add(ints);
+                }
+            }
+            return odds;
         }
     }
 }

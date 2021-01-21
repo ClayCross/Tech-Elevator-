@@ -16,7 +16,13 @@ namespace Exercises
         */
         public List<double> ArrayInt2ListDouble(int[] intArray)
         {
-            return null;
+            List<double> DoubleTime = new List<double>();
+            foreach(double ints in intArray)
+            {
+                DoubleTime.Add(ints /2 );
+            }
+
+            return DoubleTime ;
         }
     }
 }
