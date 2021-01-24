@@ -25,7 +25,55 @@ namespace Exercises
          */
         public Dictionary<string, int> Last2Revisited(string[] words)
         {
-            return null;
+            //Make a dictionary
+            Dictionary<string, int> result = new Dictionary<string, int>(); 
+
+            //check "each" string in the array using a "foreach loop"
+            foreach (string word in words)
+            {
+                //grab the lst two charachters as stringtoFind
+                string stringToFind = word.Substring(word.Length - 2);
+                // loop through current string to see if it == stringToFind
+                int count = 0;
+                for (int i = 0; i < word.Length - 2; i++)
+                {
+                    // if word.Substring == stringToFind count++
+                    if (word.Substring(i, 2) == stringToFind)
+                    {
+                        count++;
+
+                    }
+
+
+                }
+                // assign word to key and count to value(make sure not to duplicate)
+                //result.Add(word, count);
+                result[word] = count;
+                
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+            //return the dictionary
+
+
+
+
+
+
+
+            return result;
         }
     }
 }
