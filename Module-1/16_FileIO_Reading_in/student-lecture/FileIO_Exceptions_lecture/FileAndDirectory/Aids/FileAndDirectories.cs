@@ -77,18 +77,18 @@ namespace Lecture.Aids
         *
         * They work hand in hand
         */
-        public void UsingTheFileClass()
-        {
-            const string FilePath = @"C:\TestDirectory\FileName.txt";
+        //public void UsingTheFileClass()
+        //{
+        //    const string FilePath = @"C:\TestDirectory\FileName.txt";
 
-            // Check to see if a file exists
-            bool fileExists = File.Exists(FilePath);
-            if (!fileExists)
-            {
-                File.CreateText(@"C:\TestDirectory\FileName.txt");
-            }
-            // To copy a file we need the source and destination
-            File.Copy(FilePath, @"C:\TestDirectory\DestinationFileName.txt");
+        //    // Check to see if a file exists
+        //    bool fileExists = File.Exists(FilePath);
+        //    if (!fileExists)
+        //    {
+        //        File.CreateText(@"C:\TestDirectory\FileName.txt");
+        //    }
+        //    // To copy a file we need the source and destination
+        //    File.Copy(FilePath, @"C:\TestDirectory\DestinationFileName.txt");
 
         }
 
