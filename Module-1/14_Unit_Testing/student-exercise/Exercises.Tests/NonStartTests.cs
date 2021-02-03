@@ -9,9 +9,9 @@ namespace Exercises.Tests
         [TestMethod]
         public void FullStrings_ExpectNormalConcatenation()
         {
-            NonStart exercises = new NonStart();
+            NonStart words = new NonStart();
 
-            Assert.AreEqual("ellohere", exercises.GetPartialString("Hello", "There"));
+            Assert.AreEqual("ellohere", words.GetPartialString("Hello", "There"));
         }
 
        

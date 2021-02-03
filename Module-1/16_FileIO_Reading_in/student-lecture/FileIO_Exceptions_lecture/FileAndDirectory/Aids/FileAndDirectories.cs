@@ -70,6 +70,11 @@ namespace Lecture.Aids
             }
         }
 
+        internal void UsingTheFileClass()
+        {
+            throw new NotImplementedException();
+        }
+
         /*        
         * The static class File exposes a lot of methods to manipulate files
         * A class FileInfo is an instance of a File and provides
@@ -90,9 +95,9 @@ namespace Lecture.Aids
         //    // To copy a file we need the source and destination
         //    File.Copy(FilePath, @"C:\TestDirectory\DestinationFileName.txt");
 
-        }
+    }
 
 
 
     }
-}
+
