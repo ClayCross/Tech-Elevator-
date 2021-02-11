@@ -1,3 +1,5 @@
+
+
 -- List the "city name, country name" and city population, sorted by country and city population descending
 
 -- List the city name, country name and the percentage of the country's population in the city
