@@ -5,6 +5,7 @@
 --   The value immediately after the problem statement is the expected number of rows that should be returned by the query.
 
 -- 1. The name and population of all cities in Ontario, Canada (27 row
+select * from City
  select name, population from City where district = 'Ontario'
 -- 2. The name and population of all cities in Montana (1 row)
    select Name,Population from City where District = 'Montana'
@@ -42,8 +43,19 @@ from country
 where governmentform LIKE '%Monarchy%';
 
 -- 13. The name of all cities in the USA with a population between 1 million and 2 million people (6 rows) 
-
+select name 
+from City
+where CountryCode = 'USA'
+and Population > 1000000
+and Population < 2000000
 -- 14. The name and region of all countries in North or South America except for countries in the Caribbean (27 rows)
+
+select name, region
+from Country
+where Continent = 'North America'
+or Continent = 'South America'
+and region <>'Caribbean'
+
 
 -- 15. The name, population, and GNP of all countries with a GNP greater than $1 trillion dollars and a population of less than 100 million people (4 rows)
 
@@ -63,4 +75,7 @@ and population > 1000000;
 
 -- 21. The per capita GNP (i.e. GNP divided by population) in US Dollars of all countries in Europe (46 rows)
 
--- 22. The number of years since independence for all countries that have a year of independence (192 rows) 
+-- 22. The number of years since independence for all countries that have a year of independence (192 rows)
+
+select * from City
+
