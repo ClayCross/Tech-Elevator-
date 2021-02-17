@@ -71,6 +71,7 @@ Order By IndepYear
 
 -- The name & state of all cities in California, Oregon, or Washington.
 -- "city, state", sorted by state then city
+
 Select Name + ', ' + District
 	From City
 	Where district in ('California', 'Oregon', 'Washington')

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System;
+using System.Data.SqlClient;
 using System.IO;
 using System.Threading;
 using WorldDB.DAL;
@@ -9,6 +10,8 @@ namespace WorldDB
 {
     class Program
     {
+        private static string connectionString;
+
         static void Main(string[] args)
         {
             // This code reads the connection string from appsettings.json
@@ -49,7 +52,35 @@ namespace WorldDB
         private static void ReadCities()
         {
             // TODO 01: Read cities from the database and list the results on the screen.
+            string connectionstring = "Server=.\\SqlExpress;Database=World;Trusted_Connection=True;";
 
+            try
+            {
+                //Create a connection
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Now create a command for a sql statement
+                    SqlCommand cmd = new SqlCommand("Select name, population from City");
+
+                    // Execute the statement and get back a reader
+                    SqlDataReader rdr = cmd.ExecuteReader();
+
+                    //Loop through the results and display to the user
+                    while (rdr.Read())
+                    {
+                        string name = Convert.ToString (rdr["name"]);
+                        int population = Convert.ToInt32( rdr["Population"]);
+                        Console.WriteLine($"Name: {rdr["Name"]}, Population: {rdr["Population"]}");
+                    }
+                }
+
+            }
+            catch(SqlException ex)
+            {
+                Console.WriteLine($"There was a dtabase error: {ex.Message}");
+            }
             // TODO 02: Add a parameter to the query to get the cities for a given country code.
 
             Console.ReadLine();
