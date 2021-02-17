@@ -77,7 +77,7 @@ namespace WorldDB.Views
             string countryCode = GetString("Enter the Country Code: ");
 
             // TODO 08: Lookup the country (GetCountryByCode) and pass that into the country submenu
-            Country country = null;
+            Country country = countryDAO.GetCountry(countryCode);
             if (country == null)
             {
                 Console.WriteLine($"Sorry, country '{countryCode}' does not exist.");
