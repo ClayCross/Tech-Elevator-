@@ -8,6 +8,9 @@ namespace ProjectOrganizer.Models
 {
     public class Department
     {
+        public int DepartmentId { get; set; }
 
+        public string Name { get; set; }
+        public object Id { get; internal set; }
     }
 }
