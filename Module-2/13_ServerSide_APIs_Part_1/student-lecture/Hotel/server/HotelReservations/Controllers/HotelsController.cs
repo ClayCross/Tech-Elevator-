@@ -37,7 +37,20 @@ namespace HotelReservations.Controllers
             return null;
         }
 
+        [HttpGet("hotels/{hotelid}/reservations")]
+        public List<Reservation> GetReservations(int hotelId)
+        {
+            return reservationDao.FindByHotel(hotelId);
+        }
+        // create a new reservation
+        [HttpPost("reservations")]
 
+        public ActionResult<Reservation> CreateReservation(Reservation newRes)
+        {
+            Reservation res = reservationDao.Create(newRes);
 
+            return Created($/ GetReservations /{ res.Id})
+             
+        }
     }
 }

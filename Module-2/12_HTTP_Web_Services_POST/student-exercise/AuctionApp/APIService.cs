@@ -97,19 +97,47 @@ namespace AuctionApp
         public Auction AddAuction(Auction newAuction)
         {
             // place code here
-            throw new NotImplementedException();
+            RestRequest request = new RestRequest(API_URL);
+            request.AddJsonBody(newAuction);
+            IRestResponse<Auction> response = client.Post<Auction>(request);
+            if(!response.IsSuccessful)
+            {
+                throw new Exception("ExpectFailure");
+            }
+            return response.Data;
         }
 
         public Auction UpdateAuction(Auction auctionToUpdate)
         {
+            
             // place code here
-            throw new NotImplementedException();
+            RestRequest request = new RestRequest(API_URL + $"/{auctionToUpdate.Id}");
+            request.AddJsonBody(auctionToUpdate);
+            IRestResponse<Auction> response = client.Put<Auction>(request);
+
+            if (!response.IsSuccessful)
+            {
+                throw new Exception("ExpectFailure");
+            }
+            return response.Data;
+
+
+
         }
 
         public bool DeleteAuction(int auctionId)
         {
             // place code here
-            throw new NotImplementedException();
+            RestRequest request = new RestRequest(API_URL + $"/{auctionId}");
+            IRestResponse response = client.Delete(request);
+
+            if (!response.IsSuccessful)
+            {
+                throw new Exception("ExpectFailure");
+            }
+            return true;
+
+
         }
     }
 }
