@@ -52,5 +52,32 @@ namespace AuctionApp.Controllers
         }
 
 
+        [HttpPut("/auctions/{Id}")]
+
+        public ActionResult<Auction> Update(int Id, Auction update)
+        {
+            if (Id != update.Id)
+            {
+                return UnprocessableEntity();
+            }
+
+            return Ok(dao.Update(Id, update));
+        }     
+
+        [HttpDelete("/auctions/{id}")]
+
+        public ActionResult Delete (int id)
+        {
+            if (dao.Delete(id))
+            {
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
     }
 }

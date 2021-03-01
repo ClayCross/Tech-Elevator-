@@ -4,13 +4,13 @@ namespace AuctionApp.Models
 {
     public class Auction
     {
-        public int? Id { get; set; }
+        public int? Id { get; set; } [Required(ErrorMessage = "The field 'title' should not be blank.")]
 
-        public string Title { get; set; }
+        public string Title { get; set; } [Required(ErrorMessage ="The field 'description' should not be blank")]
 
-        public string Description { get; set; }
+        public string Description { get; set; } [Required(ErrorMessage ="The field 'user' should not be blank")]
 
-        public string User { get; set; }
+        public string User { get; set; } [Range(1, 10000,ErrorMessage ="The field 'current bid' should be greater than 0.")]
 
         public double CurrentBid { get; set; }
     }
