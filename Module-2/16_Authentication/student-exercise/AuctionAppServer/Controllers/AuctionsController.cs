@@ -92,6 +92,8 @@ namespace AuctionApp.Controllers
         [HttpGet("whoami")]
         public ActionResult WhoAmI()
         {
+
+
             return Ok("");
         }
     }

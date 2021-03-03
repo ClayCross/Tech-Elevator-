@@ -146,15 +146,27 @@ namespace AuctionApp
             }
             else if (!response.IsSuccessful)
             {
+                if ((int)response.StatusCode == 401)
+                {
+                    throw new UnauthorizedException("Error- provide authorization credentials.");
+                }
+                if ((int) response.StatusCode == 403)
+                {
+                    throw new ForbiddenException("Error- user is not authorized.");
+                }
 
+                throw new NonSuccessException($"{response.StatusCode}");
             }
         }
 
         public API_User Login(string submittedName, string submittedPass)
         {
+            var credentials = new { username = submittedName, paswword = submittedPass };
+            RestRequest request = new RestRequest("login");
+            IRestResponse<API_User> response = client.Post<API_User>(request);
+            request.AddJsonBody(credentials);
 
-
-            IRestResponse<API_User> response = null;
+         
 
             if (response.ResponseStatus != ResponseStatus.Completed)
             {
@@ -174,6 +186,8 @@ namespace AuctionApp
             else
             {
                 user.Token = response.Data.Token;
+
+                client.Authenticator = new JwtAuthenticator (user.Token);
 
                 return response.Data;
             }
