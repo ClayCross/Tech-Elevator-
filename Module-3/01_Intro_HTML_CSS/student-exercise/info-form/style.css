@@ -1,4 +1,7 @@
-head{
+main{
     background-color: blue;
     color: white;
+}
+h1{
+    font: white;
 }

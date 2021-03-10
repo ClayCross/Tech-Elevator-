@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    text-underline-position: center;
+}
+
+
+table {
+    margin-top: 75px;
+    border: 1px solid rgb(12, 12, 12);
+    border-collapse: collapse;
+}
+th {
+    background-color: lightgray;
+}
+td {
+    border: 1px solid black;
+    padding: 3px 2px 3px 5px;
+}
+body {
+   
+    font-family: italic, Helvetica, sans-serif;
+}
+main   {
+    margin: auto;
+    
+}
+    
+
