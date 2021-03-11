@@ -2,24 +2,88 @@
   box-sizing: border-box;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
 }
-
+ 
 html {
   font-size: 16px;
 }
-
+ 
 body {
   background-color: rgba(192, 192, 192, 0.1);
 }
-
+ 
 ul {
   margin: 0;
   padding: 0;
 }
+ 
 aside{
   position: fixed;
   width: 200px;
   border-right: 1px solid rgba(0, 173, 238, 0.4);
   height: 100vh;
-
-
+  padding-left: 20px;
+  padding-right: 20px;
+ 
+ 
 }
+ 
+ img{  
+  height: 120px block;
+  margin: 0 auto;
+ 
+ 
+ }
+ main{
+   margin-left: 200px;
+ }
+ 
+ li{
+   list-style: 0;
+   text-align: center;
+   text-transform: uppercase;
+   border-bottom: 1px solid rgba(0, 173, 238, 0.4);
+   margin: 10px auto;
+   padding-bottom: 10px;
+   width: 80%;
+   line-height: 2;
+ 
+ }
+ a{
+   font-weight: bold;
+   color: rgba(0, 173, 238, 0.4);
+   text-decoration: none;
+ 
+ }
+ 
+ a:hover {
+   text-decoration: underline;
+   
+ }
+ 
+ #what-we-do{
+  color: #8cc36f;
+ }
+ #our-work{
+   border-right: 1px solid var(--green);
+   border-left: 1px solid var(--green);
+   color: #8cc36f;
+ }
+ 
+#contact-us{
+  color: #8cc36f;
+}
+ section p{
+  color: black;
+ }
+
+ footer p{
+
+ margin-left: 200px;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
