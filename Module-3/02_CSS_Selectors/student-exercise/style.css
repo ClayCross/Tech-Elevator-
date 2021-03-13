@@ -24,18 +24,31 @@ aside{
   padding-left: 20px;
   padding-right: 20px;
  
- 
 }
  
- img{  
-  height: 120px block;
-  margin: 0 auto;
- 
- 
+ aside img{  
+  
+    display: block;
+    margin: 0 auto;
+    height: 120px;
+
  }
+ 
  main{
    margin-left: 200px;
+   padding-left: 20px;
+   padding-right: 20px;
+  
  }
+
+ main > header{
+  height: 120px;
+  
+ }
+ main > header > img{
+   height: 80%;
+ }
+
  
  li{
    list-style: 0;
@@ -62,6 +75,7 @@ aside{
  
  #what-we-do{
   color: #8cc36f;
+  
  }
  #our-work{
    border-right: 1px solid var(--green);
