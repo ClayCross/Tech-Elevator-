@@ -120,3 +120,27 @@ div.food-item img {
 div.food-item p {
     line-height: 2em;
 }
+@media screen and (max-width: 768px){
+    .container{
+        grid-template-areas: 
+        "header"
+        "men-nav"
+        "main"
+        "upcoming-events"
+        "footer"
+        ;
+    grid-template-columns: 1fr;
+
+    }
+
+
+
+
+}
+@media screen and (max-width: 400px) {
+    header {
+        color: red;
+
+    }
+    
+}

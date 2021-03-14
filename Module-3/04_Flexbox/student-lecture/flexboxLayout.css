@@ -41,5 +41,31 @@ h2 {
 
 
 /*FLEX settings*/
+#container1 {
+    display: flex;
+    flex-direction: row;
+    /*wrap reverse reversed the rows from top to bottom to bottom to top*/
+    flex-wrap: wrap;
 
+    
+    align-items: flex-start;
 
+    justify-content: space-between;
+    
+    
+}
+#container2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#container2 :nth-child(6) {
+    color:red;
+    order: 1;
+
+    flex-basis: 50%;
+}
+#container2 :nth-child(3) {
+    align-self:flex-end;
+}

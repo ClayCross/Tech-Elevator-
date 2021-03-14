@@ -1,0 +1,66 @@
+#main-grid {
+    grid-area: main-grid;
+
+}
+
+#experience-grid {
+    grid-area: experience-grid;
+    display: grid;
+     row-gap: 20px;
+     column-gap: 50px;
+}
+
+#headline {
+    grid-area: headline-grid-item;
+}
+
+#student-picture {
+    grid-area: student-picture-grid-item;
+    text-align: center;
+}
+
+#student-quote {
+    grid-area: student-quote-grid-item;
+}
+
+#student-profile {
+    grid-area: student-profile-grid-item;
+}
+
+#student-contact {
+    grid-area:student-contact-grid-item;
+    text-align: center;
+}
+
+#experience-code{
+    grid-area: experience-code-grid-item;
+}
+#experience-database {
+    grid-area: experience-database-grid-item;
+}
+
+#experience-web {
+    grid-area: experience-grid-item;
+}
+
+#experience-design {
+    grid-area: experience-design-grid-item;
+}
+
+
+
+ #main-grid{
+     align-items: center;
+     display: grid;
+     row-gap: 20px;
+     column-gap: 50px;
+     grid-template-areas:
+     "headline-grid-item headline-grid-item student-picture-grid-item"
+     "student-quote-grid-item student-quote-grid-item student-picture-grid-item"
+     "student-profile-grid-item student-profile-grid-item student-contact-grid-item"
+     "student-profile-grid-item student-profile-grid-item student-contact-grid-item"
+     "experience-grid experience-grid experience-grid "
+     ;
+     
+ }
+ 
