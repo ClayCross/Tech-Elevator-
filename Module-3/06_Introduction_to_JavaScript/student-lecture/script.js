@@ -15,16 +15,40 @@ function variables() {
   printValueAndType("daysInWeek", daysInWeek);
 
   // Can I change it?
-
+ //daysInWeek = 8;// Cannot do this
   console.log(`There are ${daysInWeek} days in the week`)
 
   // Declares a variable those value can be changed
-
+  let n;
+  printValueAndType("n",n);
+  n = "Tech Elevator";
+  printValueAndType("n",n);
   // Can I change it?
+  n =21;
+  printValueAndType("n",n);
 
+
+  // DEclare a variable that holds null
+  let thing = null;
+  printValueAndType("thing", thing)
+  
   // Declares a variable that will always be an array (prime numbers)
+  const prime = [1,3,5,7,11];
+  console.table(prime);
+
+
+  // Declare not a number
+  let notta = NaN;
+  printValueAndType("notta", notta);
 
   // Can I change the values in the array?
+  prime.push(13);
+  console.table(prime);
+
+
+// This won't work
+  prime = [2,4,6];
+
 
   // Can I re-assign the variable?
   //  prime = "prime numbers";
@@ -87,14 +111,46 @@ function falsy(x) {
  */
 function arrays() {
   // Create an empty array
+  let junkDrawer = [];  // Empty string
+  printValueAndType("junkDrawer", junkDrawer)
 
   // Add some elements by pushing
+  junkDrawer.push("Ben");
+  printValueAndType("junkDrawer", junkDrawer);
 
   // Add some more elements sparsely
+  junkDrawer[3] = 99;
+  printValueAndType("junkDrawer", junkDrawer);
+
+  //Add a complex type to the array
+  let person = {
+    name: "Heidi", 
+    height: 67,
+    children: [
+      "Rob",
+      "Dan"
+    ]
+  };
+  junkDrawer.unshift(person
+
+  )
+
+  // Remove the last element 
+  let lastElement =junkDrawer.pop()
+  console.log(lastElement);
+
 
   // Use the table command to print the results
+  console.table(junkDrawer);
+  console.log(`Length of junk drawer is ${junkDrawer.length}`);
 
   // Loop through the array and print all elements
+  // i++ increments by 1
+  // 1+= 1;
+  // i = i + 1;
+  for(let i = 0; i < junkDrawer.length; i++){
+    printValueAndType(`junkDrawer[${i}]` , junkDrawer[i]);
+  }
 
   return 0;
 }
@@ -116,22 +172,37 @@ function objects() {
       "Samir Nagheenanajar",
       "Michael Bolton"
     ],
-    introduce: function () {
+    introduce: function (pm) {
+      let greeting = "Good Morning";
+      if(pm){
+        greeting = "Good afternoon";
+      }
       return `Hi, my name is ${this.firstName} ${this.lastName}. I am (${this.age}) years old.`;
     }
   };
 
   // Log the object
+  console.log(person);
+  console.table(person);
 
   // Log the first and last name
+  console.log(`First name is ${person.firstName}`);
+
 
   // Change a property
-
+  person.firstName = "Lucky";
   console.log(person);
 
   // Log each employee
+  console.log("Employees:");
+  for (emp of person.employees){
+    console.log(`\t${emp}`);
+
+  }
 
   // Call the object function introduce
+  let introduction = person.introduce();
+  console.log(introduction);
 
 }
 
@@ -146,10 +217,12 @@ earlier ones are overridden and the most recent one will be used.
 */
 
 function Add(num1, num2) {
+  console.log("In Add (z,y)");
   return num1 + num2;
 }
 
 function Add(num1, num2, num3) {
+  console.log("In Add (x,y,z");
   return num1 + num2 + num3;
 }
 
@@ -193,6 +266,13 @@ function stringFunctions(value) {
         - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
     */
    // Split and join
+   let s = "The quick brown fox jumped over the lazy dog.";
+   arr = s.split(" ");
+   console.table(arr);
+   arr.Join("...");
+   console.log(s);
+
+
 
 }
 

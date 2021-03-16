@@ -17,4 +17,7 @@ body {
   margin: 0 10px;
 }
 
-.bio:nth-child(2) img {}
+.bio:nth-child(2) img {
+  display:flex;
+  justify-content: flex-end;
+}
