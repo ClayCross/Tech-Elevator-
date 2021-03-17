@@ -6,10 +6,12 @@ function arrayFunctions()
   // Split a string into an array
     let phrase1 = "When in the course of human events it becomes necessary for one people to dissolve the political bands";
     // split here...
+    let words = phrase1.split(" ");
+    printArray(words);
 
     let words;
     // call printArray here...
-    
+    let arr = words.slice(3,7);
 
     // array.slice gets a "sub-array" but does not modify the original
     // array.slice(startElement, nonInclusiveEndElement)
@@ -24,6 +26,7 @@ function arrayFunctions()
     // array.splice(start, count, newelements…)
     console.log('*** ***\r\narray.splice gets a "sub-array" and removes those elements.' );
     // splice here...
+    arr = words.splice(3, 4, "middle", "of", "the", "day");
     printArray(arr);
     printArray(words);
 
@@ -32,7 +35,7 @@ function arrayFunctions()
     // array.concat joins two arrays, and does not modify either.
     console.log('*** ***\r\narray.concat joins two arrays, and does not modify either.' );
     // concat here...
-    let bigArray;
+    let bigArray = words.concat(arr);
     printArray(words);
     printArray(arr);
     printArray(bigArray);
@@ -60,6 +63,9 @@ function printArray(arr){
  * @param {number} firstParameter the first parameter to multiply
  * @param {number} secondParameter the second parameter to multiply
  */
+function multiplyTogether(num1, num2){
+  return num1 * num2;
+}
 
 /**
  * This version makes sure that no parameters are ever missing. If
