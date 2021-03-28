@@ -34,12 +34,12 @@ export default new Vuex.Store({
   },
   mutations: {
     TOGGLE_READ_STATUS(state, isbn){
-      let book = state.books.find( (b) => {return b.isbn === isbn});
+      let book = state.books.find(((b) => {return b.isbn === isbn}));
       if (book){
-        book.read = !book.read;
+        book.read = !book.read
       }       
     },
-    ADD_BOOK_(state, newBook){
+    ADD_BOOK(state, newBook){
     state.books.push(newBook);
     },
   },
