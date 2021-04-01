@@ -10,6 +10,9 @@
 <script>
 export default {
     name: "new-book-form",
+    props:{
+        isbn: Number,
+    },
     data() {
         return {
             book: {
@@ -29,6 +32,7 @@ export default {
                 read: false,
                 isbn: ''
             };
+            this.$router.push({name: 'my-books', params: {isbn: this.isbn}})
         }
     }
 }
